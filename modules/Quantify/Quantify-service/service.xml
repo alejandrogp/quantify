@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.0.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_0_0.dtd">
+
+<service-builder package-path="com.quantify.liferay">
+
+	<namespace>quantify</namespace>
+
+	<entity local-service="true" name="Workout" remote-service="true" uuid="true">
+
+		<!-- PK fields -->
+		<column name="workoutId" primary="true" type="long" />
+		<!-- Group instance -->
+		<column name="groupId" type="long" />
+		<!-- Audit fields -->
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+		<column name="description" type="String" />
+		<column name="sportId" type="long" />
+		<column name="date" type="Date" />
+
+	</entity>
+
+	<entity local-service="true" name="Sport" remote-service="true" uuid="true">
+
+		<!-- PK fields -->
+		<column name="sportId" primary="true" type="long" />
+		<!-- Group instance -->
+		<column name="groupId" type="long" />
+		<!-- Audit fields -->
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+		<column name="description" type="String" />
+
+	</entity>
+
+
+</service-builder>
+
+
+<!--
+
+​
+Base de datos - All in your mind.
+Deportista
+	deportistaId
+	userId
+	equipo
+	deporte
+Rendimiento
+	z0
+	z1
+	z2
+	z3
+	z4
+Sesión Entrenamiento
+	sesionId
+	titulo
+	descripcion
+	modalidadId
+	orden
+Modalidad entrenamiento
+	modalidadId
+	nombre
+Entrenamiento
+	entrenamientoId
+	userId
+	sesionId
+	modalidadId
+	fecha
+	datosCargaExterna
+	comentarios
+	cargaSubjetiva
+	Objetivo
+	objetivoId
+	nombre
+	Mesociclo
+	mesocicloId
+	objetivoId
+	nombre
+Control Entrenamiento
+	entrenamientoId
+	zonaEntrenamiento
+	tiempo
+
+-->

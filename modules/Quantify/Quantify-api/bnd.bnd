@@ -1,0 +1,9 @@
+Bundle-Name: Quantify-api
+Bundle-SymbolicName: com.quantify.liferay.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.quantify.liferay.exception,\
+	com.quantify.liferay.model,\
+	com.quantify.liferay.service,\
+	com.quantify.liferay.service.persistence
+-includeresource: META-INF/service.xml=../Quantify-service/service.xml
