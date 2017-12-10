@@ -41,6 +41,48 @@
 
 	</entity>
 
+	<entity local-service="true" name="Zone" remote-service="true" uuid="true">
+
+		<!-- PK fields -->
+		<column name="zoneId" primary="true" type="long" />
+		<!-- Group instance -->
+		<column name="groupId" type="long" />
+		<!-- Audit fields -->
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+		<column name="code" type="String" />
+		<column name="description" type="String" />
+
+	</entity>
+
+	<entity local-service="true" name="UserZone" remote-service="true" uuid="true">
+
+		<!-- PK fields -->
+		<column name="userZoneId" primary="true" type="long" />
+
+		<!-- Audit fields -->
+		<column name="userId" type="long" />
+		<column name="zoneId" type="long" />
+		<column name="from" type="long" />
+		<column name="to" type="long" />
+
+	</entity>
+
+	<entity local-service="true" name="Athlete" remote-service="true" uuid="true">
+
+		<!-- PK fields -->
+		<column name="athleteId" primary="true" type="long" />
+
+		<!-- Other fields -->
+		<column name="userId" type="long" />
+		<column name="date" type="Date" />
+
+	</entity>
+
 
 </service-builder>
 
